@@ -1,0 +1,53 @@
+<view class="container">
+    <view class="cell-wrap" wx:for="{{mealNumList}}" wx:key="{{item.mealType}}">
+      <view class="title">{{item.mealType==1?'当日午餐':'当日晚餐'}}</view>
+      <view class="cell">
+        <view class="cell-header">
+          <view class="cell-header-left">系统预计回购餐品数量</view>
+          <view class="cell-header-right">
+            <text class="cell-header__total">{{item.mealNum}}</text>
+            <text class="cell-header__suffix">份</text>
+          </view>
+        </view>
+        <view class="cell-body">
+          <view class="cell-body-content">
+            <view class="cell-body-left">
+              <text class="cell-body__label">输入回购餐品数量</text>
+              <text class="cell-body__hint">一经填写后无法修改，谨慎填写</text>
+              <view class="cell-body-field">
+                <input
+                  class="cell-body__input"
+                  disabled="{{item.mealNum>0?true:false}}"
+                  type="number"
+                  data-mealType="{{item.mealType}}"
+                  bindinput="handleInputChange"
+                  value="{{item.inputNumber}}"
+                />
+                <text class="cell-body__suffix">份</text>
+              </view>
+            </view>
+            <view class="cell-body-right">
+              <view class="qr">
+                <view class="qr__icon"></view>
+                <view class="qr__text">扫一扫</view>
+              </view>
+              <view class="qr-info">
+                <view class="qr__total">0</view>
+                <view class="qr__suffix">份</view>
+              </view>
+            </view>
+          </view>
+          <i-button
+            i-class="cell-confirm__btn"
+            data-mealType="{{item.mealType}}"
+            bind:click="handleConfirmTap"
+            disabled="{{item.mealNum>0?true:false}}"
+          >
+            确定
+          </i-button>
+        </view>
+      </view>
+    </view>
+  
+    <i-message id="message" i-class="message" />
+  </view>

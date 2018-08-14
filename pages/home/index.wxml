@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="home">
+    <view class="scanBox row column align_items_c just_cont_c">
+      <image class="scanBtn" src="../../img/scanbtn.png" bindtap="handleScan"></image>
+      <text class="scanTip">扫码确认取餐</text>
+    </view>
+    <view class="cellBox">
+        <zan-panel hideBorderTop >
+          <zan-cell title="查看当日订单"  is-link url="/pages/order/index" >
+          </zan-cell>
+        </zan-panel>
+        <zan-panel hideBorderTop>
+          <zan-cell title="查看对账信息" linkType="switchTab"  is-link  url="/pages/account/index" >
+          </zan-cell>
+        </zan-panel>
+        <zan-panel hideBorderTop>
+          <zan-cell title="确认当日收到的餐品数量"  is-link url="/pages/mealTotal/index" >
+          </zan-cell>
+        </zan-panel>
+        <zan-panel hideBorderTop>
+          <zan-cell title="确认当日回购的餐品数量"  is-link url="/pages/receiveMealTotal/index" >
+          </zan-cell>
+        </zan-panel>
+    </view>
+  </view>
+</view>

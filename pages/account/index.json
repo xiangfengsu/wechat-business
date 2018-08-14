@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "对账信息",
+  "usingComponents": {
+    "i-button": "../../components/iview/button/index",
+    "i-message": "../../components/iview/message/index",
+    "i-modal": "../../components/iview/modal/index"
+  }
+}

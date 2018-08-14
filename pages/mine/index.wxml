@@ -1,0 +1,30 @@
+<view class="container">
+    
+    <view class="context">
+        <zan-panel hideBorderTop>
+            <zan-cell title="商家" label="{{name}}" is-link >
+                <image  slot="icon" class="cell-icon" src="/img/mineicon/personal_03.png" />
+            </zan-cell>
+        </zan-panel>
+        <zan-panel hideBorderTop>
+            <zan-cell title="地址" label="{{address}}" is-link >
+                <image  slot="icon" class="cell-icon" src="/img/mineicon/personal_06.png" />
+            </zan-cell>
+        </zan-panel>
+        <zan-panel hideBorderTop>
+            <zan-cell title="联系人" label="{{linkman}}" is-link >
+                <image  slot="icon" class="cell-icon" src="/img/mineicon/personal_08.png" />
+            </zan-cell>
+        </zan-panel>
+        <zan-panel hideBorderTop>
+            <zan-cell title="客服电话" label="{{phoneNumber}}" bindtap="callTelHandle">
+                <image  slot="icon" class="cell-icon" src="/img/mineicon/personal_10.jpg" />
+            </zan-cell>
+        </zan-panel>
+    </view>
+    <view class="footer" >
+        <view class="loginoutBtn" bindtap="loginOutHandle">
+            退出账号
+        </view>
+    </view>
+</view>

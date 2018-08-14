@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "商家中心",
+  "backgroundTextStyle":"white",
+  "navigationBarTextStyle":"white",
+  "navigationBarBackgroundColor": "#059983",
+  "disableScroll":true,
+  "usingComponents": {
+    "zan-cell": "../../components/cell2/index",
+    "zan-panel": "../../components/panel2/index"
+  }
+}

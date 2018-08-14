@@ -1,0 +1,69 @@
+<view class="container">
+  <view class="header">
+    <view class="tabs">
+      <view
+        class="tab {{index == activeTab ? 'tab-active' : ''}}"
+        bindtap="handleTab"
+        data-index="{{index}}"
+        wx:for="{{tabs}}"
+        wx:key="{{item.icon}}"
+      >
+        <view class="tab-icon {{item.icon}}"></view>
+        <view class="tab-text">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view
+    class="copies"
+    wx:if="{{orderList.length > 0}}"
+  > -->
+  <view
+    class="copies"
+  >
+    <view class="copies-title">
+      <text class="copies-title__prefix">本批餐品共：</text>
+      <text class="copies-title__total">{{totalNum}}</text>
+      <text class="copies-title__suffix">份</text>
+    </view>
+    <view class="copies-context">
+      <view class="copies-context-item">
+        <text class="copies-context__prefix">已约定：</text>
+        <text class="copies-context__total">{{orderNum}}</text>
+        <text class="copies-context__suffix">份</text>
+      </view>
+      <view class="copies-context-item">
+        <text class="copies-context__prefix">还可预定：</text>
+        <text class="copies-context__total">{{leftNum}}</text>
+        <text class="copies-context__suffix">份</text>
+      </view>
+      <view class="copies-context-item">
+        <text class="copies-context__prefix">已领取：</text>
+        <text class="copies-context__total">{{useNum}}</text>
+        <text class="copies-context__suffix">份</text>
+      </view>
+      <view class="copies-context-item">
+        <text class="copies-context__prefix">待领取：</text>
+        <text class="copies-context__total">{{waitNum}}</text>
+        <text class="copies-context__suffix">份</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="cell-group">
+    <!-- <view class="cell">
+      <view class="cell__date">2018-07-06 13-0-0</view>
+      <view class="cell__name">梁师傅</view>
+      <view class="cell__status">待领取</view>
+    </view> -->
+    <view
+      class="cell"
+      wx:for="{{orderList}}"
+      wx:key="{{index}}-{{orderDate}}"
+    >
+      <view class="cell__date">{{item.orderDate}} {{item.orderTime}}</view>
+      <view class="cell__name">{{item.orderUser}}</view>
+      <view class="cell__status">{{item.orderStatus}}</view>
+    </view>
+  </view>
+</view>

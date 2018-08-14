@@ -1,0 +1,202 @@
+page {
+  background-color: #eeeff0;
+}
+
+.title {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 65rpx;
+}
+
+.cell {
+  background-color: #fff;
+}
+
+.cell-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  height: 74rpx;
+}
+
+.cell-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e0e0e0;
+  border-bottom-width: 1px;
+}
+
+.cell-header-left {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.cell-header__total {
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  color: #059983;
+}
+
+.cell-header__suffix {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.cell-body {
+  padding-bottom: 26rpx;
+}
+
+.cell-body-content {
+  padding: 0 20rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cell-body-left {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45rpx;
+}
+
+.cell-body__label {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.cell-body__hint {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.cell-body-field {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cell-body__input {
+  margin-right: 20rpx;
+  width: 110rpx;
+  font-size: 55rpx;
+  color: #059983;
+  text-align: right;
+}
+
+.cell-body__suffix {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.cell-body-right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30rpx;
+  padding-right: 35rpx;
+}
+
+.qr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30rpx;
+  width: 152rpx;
+  height: 152rpx;
+  background-color: #ebeaea;
+}
+
+.qr::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e0e0e0;
+  border-width: 1px;
+  border-radius: 6rpx;
+}
+
+.qr__icon {
+  width: 70rpx;
+  height: 70rpx;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAA+CAQAAADaf27nAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBxAPBTe7943RAAAB7ElEQVRo3u3Zv2sTYRgH8E9izKCigjhYUJR2sZAOIigq4tRJR3+BvyZx0EFBcPI/KEEEcRCliLYIxaW4KbY4FBVxEKpUxYqo4NKhHVrbxuFsTpE0R4T3qrzfIYR738vz4b0X7nJPoVc9m5x1QLvlGqVmSLfvmuewm1Y0HJ027oGqjwsHCnXGfneszlBgo08ZZt12rOmcSSfcT76Wfh7abUAZH7ww1/DEeY8yIbhsQrnh6Eo7tVulX7ehdDWKXqqouahqPlOZv03ROVUFoyrmKIIdKriuJxCCeVdcw1b7ElXCgN5Wf7PF3ALbU8Z68CUw4xtYmzKKgQF/JHdAZERGZETGf8BInjBmA9eeSasmjHve6vc5MOOrPu8M8OtDYK5ZUnsj90RGZERGlpSss7f+FzKfzBouGdaZ91p4Xcx5JZLUSnYthYsSb22RERmR8U8zuozpUwhe/a4xXSnjkA5HbAiMaHNUh4MpYxkEv7OU0s8ltTdyT2RERmRERmuMUK2tJoykz9MWuHZyK51IGU/BqcCMk+B5yhjxCqedD7ZXii44g1GPSV9I7vFQGe+NmFzk9GduZCrT7pI1iyC22YKZ39vBZG+ObzaeYVaW5viU4wvN8fQiDKro8abJK+snGdukg6YWGZ025qrOBQQ/AE0SZAJzmR3xAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.qr__text {
+  margin-top: 6rpx;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  color: #a1a1a1;
+}
+
+.qr-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rpx;
+  width: 100%;
+  height: 42rpx;
+}
+
+.qr-info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #d2d2d2;
+  border-width: 1px;
+  border-radius: 6rpx;
+}
+
+.qr__total {
+  margin-right: 5rpx;
+  font-size: 30rpx;
+  color: #059983;
+}
+
+.qr__suffix {
+  font-size: 22rpx;
+}
+
+.cell .cell-confirm__btn {
+  border-radius: 8rpx;
+  color: #fff !important;
+  background-color: #059983 !important;
+}
+
+.message {
+  background-color: #059983 !important;
+}

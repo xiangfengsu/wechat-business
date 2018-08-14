@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="cell-group">
+    <view class="cell">
+      <view class="cell-title">日期</view>
+      <view class="cell-title">已售数量</view>
+      <view class="cell-title">佣金</view>
+      <view class="cell-title">类型</view>
+      <view class="cell-title"></view>
+    </view>
+    <view class="cell" wx:for="{{checkAccountList}}" wx:key="{{index}}-{{item.total}}">
+      <view class="cell-date">{{item.orderDate}}</view>
+      <view class="cell-total">{{item.useNum}}</view>
+      <view class="cell-price">{{item.commission}}</view>
+      <view class="cell-price">{{item.mealType == 1 ? '午餐':'晚餐'}}</view>
+      <view class="cell-operation">
+        <view class="cell-operation__btn" data-sellerId="{{item.sellerId}}" data-mealType="{{item.mealType}}" bindtap="handleCheck">发起对账</view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <i-button i-class="footer__btn" bindtap="handleCallPhone">联系客服</i-button>
+  </view>
+  <i-message id="message" i-class="message" />
+  <i-modal visible="{{ checkModalVisible }}" bind:ok="handleCheckOK" bind:cancel="handleCheckClose">
+    <view>即将发起对账</view>
+  </i-modal>
+</view>

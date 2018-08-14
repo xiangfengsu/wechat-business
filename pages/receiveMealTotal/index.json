@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "当日回购餐品数量",
+  "usingComponents": {
+    "i-button": "../../components/iview/button/index",
+    "i-message": "../../components/iview/message/index"
+  }
+}

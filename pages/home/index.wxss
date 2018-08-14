@@ -1,0 +1,32 @@
+page {
+  background-color: #eeeff0;
+}
+
+page{
+  background-color: #059983;
+}
+.home{
+  padding: 0 20rpx;
+}
+.scanBox{
+  width: 100%;
+  height: 504rpx;
+  background-color: #037c6a;
+  border-radius: 6rpx;
+}
+.scanBtn{
+  width: 171rpx;
+  height: 151rpx;
+  display: block;
+}
+.scanTip{
+  font-size: 30rpx;
+  color: #fff;
+  padding-top: 42rpx;
+}
+.cellBox{
+  margin-top: 20rpx;
+  border-radius: 6rpx;
+  background-color:  #08c3a7 ;
+
+}
